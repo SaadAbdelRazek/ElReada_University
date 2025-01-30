@@ -1,0 +1,211 @@
+:root {
+    --thirdcolor: #088179;
+
+}
+
+body {
+    font-family: sans-serif;
+    direction: rtl;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+form {
+    padding: 10px;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: var(--thirdcolor);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-group {
+    border-radius: 20px;
+}
+
+input#firstName,
+input#lastName,
+input#middleName,
+select#nationality,
+input#idNumber,
+select#referral,
+select#faculty,
+select#level,
+input#phone {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+select#nationality,
+select#referral,
+select#faculty,
+select#level {
+    width: 102%;
+}
+
+input#email {
+    border-radius: 44px;
+}
+
+.egypt_flag {
+    width: 30px;
+}
+
+.payment-group {
+    text-align: center;
+}
+
+.payment {
+    text-align: center;
+}
+
+.phone-input input {
+    margin-right: 10px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.gender-group input,
+.gender-group label {
+    margin-right: 20px;
+}
+
+.gender-group,
+.birthdate-group,
+.phone-group,
+.email-group {
+    display: flex;
+    /* align-items: center; */
+    margin-bottom: 15px;
+}
+
+.birthdate-group select {
+    width: 30%;
+    margin-right: 5px;
+}
+
+.phone-group img {
+    margin-right: 5px;
+}
+
+button {
+    background-color: var(--thirdcolor);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+
+body {
+    font-family: sans-serif;
+    direction: rtl;
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group,
+.referral-group,
+.faculty-group,
+.level-group,
+.payment-group {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.phone-group {
+    display: flex;
+    align-items: center;
+}
+
+.phone-group img {
+    margin-right: 5px;
+}
+
+.file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-upload-item {
+    margin-bottom: 15px;
+}
+
+.file-upload-item label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.file-drop-zone {
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.file-drop-zone input[type="file"] {
+    display: none;
+}
+
+.terms-and-conditions label {
+    margin: 20px 1px;
+    display: inline;
+}
+
+.terms-and-conditions input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+.order {
+    margin-top: 20px;
+}
