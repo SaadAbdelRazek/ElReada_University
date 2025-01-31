@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\University;
 use App\Models\UniversityGoal;
+use App\Models\UniversityCouncilGoal;
+use App\Models\UniversityCouncilPower;
 use App\Models\UniversityMessage;
 use App\Models\UniversityValue;
 
@@ -25,5 +27,12 @@ class AboutController extends Controller
         $logo = University::pluck('logo')->first();
 
         return view('website.Slogan',compact('logo'));
+    }
+
+    public function President(){
+        $c_goal = UniversityCouncilGoal::all();
+        $c_power = UniversityCouncilPower::all();
+        return view('website.Presidents',compact('c_goal','c_power'));
+
     }
 }

@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 Route::get('/about-us',[AboutController::class, 'index'])->name('about');
 Route::get('/about-us-logo',[AboutController::class, 'slogan'])->name('slogan');
+Route::get('/about-us-President',[AboutController::class, 'President'])->name('Presidents');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
