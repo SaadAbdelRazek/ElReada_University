@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('website.index');
-});
+})->name('home');
 
 Route::get('/about-us',[AboutController::class, 'index'])->name('about');
 Route::get('/about-us-logo',[AboutController::class, 'slogan'])->name('slogan');

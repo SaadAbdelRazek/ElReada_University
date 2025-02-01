@@ -178,14 +178,9 @@
     </section>
     <!--========================================== About Us =============================================-->
     <section class="container about-us-section">
-        <div class="aside-content">
-            <ul class="aside-ul">
-                <li><a href="AboutUs.html">عن الجامعة</a></li>
-                <li><a href="Presidents.html">مجلس الجامعة</a></li>
-                <li><a href="Study.html">نظام الدراسة فى الجامعة</a></li>
-                <li><a href="Slogan.html">شعار الجامعة</a></li>
-            </ul>
-        </div>
+
+        @include('website.master.uni-aside')
+        
         <div class="content">
             <div class="box">
                 <h2>الهيكل التنظيمى والإدارى</h2>
