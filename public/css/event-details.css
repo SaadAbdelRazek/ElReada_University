@@ -1,0 +1,144 @@
+/* Color Palette */
+:root {
+    --firstcolor: #002C5C;
+    --secondcolor: #00337c;
+    --thirdcolor: #088179;
+    --fourthcolor: #002c5c;
+    --fifthcolor: #f3ecb0;
+    --sixthcolor: #fff;
+    --seventhcolor: #f9f9f9;
+}
+
+/* General Styles */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--seventhcolor);
+    color: var(--firstcolor);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    direction: rtl;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../assets/images/event.jpg') center/cover no-repeat;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* Overlay for better readability */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 44, 92, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--sixthcolor);
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Event Container */
+.event-container {
+    max-width: 1000px;
+    margin: auto;
+    background: var(--sixthcolor);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 44, 92, 0.2);
+}
+
+/* Media Section */
+.event-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.event-image, .event-video {
+    width: 48%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Details */
+.event-details {
+    padding: 20px;
+    text-align: right;
+}
+
+.event-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--thirdcolor);
+    font-weight: bold;
+}
+
+.event-description {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--firstcolor);
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Countdown Timer */
+.event-info {
+    font-size: 1.2rem;
+    color: var(--secondcolor);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Register Button */
+.register-button {
+    display: inline-block;
+    background-color: var(--thirdcolor);
+    color: var(--sixthcolor);
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background-color: var(--firstcolor);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-media {
+        flex-direction: column;
+    }
+    .event-image, .event-video {
+        width: 100%;
+        height: auto;
+    }
+}

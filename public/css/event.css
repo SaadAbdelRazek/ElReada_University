@@ -44,9 +44,11 @@ label {
     border-radius: 20px;
 }
 
-input#firstName,
-input#lastName,
+input#name,
+input#age,
+input#email,
 input#middleName,
+input#country,
 select#nationality,
 input#idNumber,
 select#referral,
@@ -64,9 +66,6 @@ select#level {
     width: 102%;
 }
 
-input#email {
-    border-radius: 44px;
-}
 
 .egypt_flag {
     width: 30px;
@@ -80,11 +79,11 @@ input#email {
     text-align: center;
 }
 
-.phone-input input {
-    margin-right: 10px;
-}
+
 
 input[type="text"],
+input[type="number"],
+input[type="email"],
 select {
     width: 100%;
     padding: 10px;
@@ -98,9 +97,7 @@ select {
 }
 
 .gender-group,
-.birthdate-group,
-.phone-group,
-.email-group {
+.birthdate-group{
     display: flex;
     /* align-items: center; */
     margin-bottom: 15px;
@@ -111,9 +108,6 @@ select {
     margin-right: 5px;
 }
 
-.phone-group img {
-    margin-right: 5px;
-}
 
 button {
     background-color: var(--thirdcolor);
@@ -153,6 +147,8 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="number"],
+input[type="tel"],
 select {
     width: 100%;
     padding: 10px;
@@ -160,10 +156,6 @@ select {
     border-radius: 3px;
 }
 
-.phone-group {
-    display: flex;
-    align-items: center;
-}
 
 .phone-group img {
     margin-right: 5px;
