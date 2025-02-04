@@ -78,7 +78,7 @@
         </button>
         <div class="mobile-menu" id="mobile-menu">
             <ul>
-                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="{{route('home')}}">الرئيسية</a></li>
                 <li><a href="{{route('about')}}">عن الجامعة</a></li>
                 <li><a href="Colleage.html">الدراسة فى الجامعة</a></li>
                 <li><a href="Event.html">الأحداث</a></li>
@@ -89,7 +89,7 @@
         <div class="header-bottom">
             <nav>
                 <ul class="nav-items">
-                    <li class="nav-item"><a href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a href="{{route('home')}}">الرئيسية</a></li>
                     <li class="nav-item">
                         <a href="{{route('about')}}">عن الجامعة</a>
                         <ul class="dropdown">
