@@ -11,7 +11,7 @@
                                     <div class="card-header" dir="rtl" style="display: flex; align-items: center; justify-content: space-between;">
                                         <span>الأسئلة الشائعة المعروضة بالموقع :</span>
                                         <div class="icon-container">
-                                            <a href="{{route('freq_questions.store')}}" class="icon-btn icon-add" title="Add"><i class="fas fa-plus"></i></a>
+                                            <a href="{{route('freq_questions.create')}}" class="icon-btn icon-add" title="Add"><i class="fas fa-plus"></i></a>
                                         </div>
                                     </div>
                                     <div class="card-body">
