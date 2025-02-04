@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الصفحة الرئيسية</title>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +54,7 @@
                 </button>
             </div>
             <div class="header-top-center">
-                <img class="logo" src="assets/images/logo/Logo_Uni.png" alt="logo" />
+                <img class="logo" src="{{asset('assets/images/logo/Logo_Uni.png')}}" alt="logo" />
             </div>
             <div class="header-top-left">
                 <form action="">

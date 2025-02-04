@@ -39,70 +39,21 @@
         <div class="container">
             <div class="card__container row swiper">
                 <h1>أخبار الجامعة</h1>
-                <a href="#" class="btn btn-m">اظهارالكل</a>
+                <a href="{{route('news')}}" class="btn btn-m">اظهارالكل</a>
                 <div class="card__content">
                     <div class="card-list swiper-wrapper">
+                        @foreach($news as $single)
                         <article class="card-item card__article swiper-slide">
                             <a href="#" class="card-link">
-                                <img class="card-item__swipper card-image" src="assets/images/news/news_1.jpeg" alt="Card Image"
+                                <img class="card-item__swipper card-image" src="{{$single->photo}}" alt="Card Image"
                                     class="card-image">
-                                <p class="news-title">الدكتور عمر المقرمي رئيس المركز الرئيسي يعلن عن اتفاقية جديدة مع
-                                    جامعة إينونو الحكومية التركية</p>
+                                <p class="news-title">{{$single->title}}</p>
                                 <button class="card-button material-symbols-rounded"><i
                                         class="fa-solid fa-arrow-right"></i>
                                 </button>
                             </a>
                         </article>
-                        <article class="card-item card__article swiper-slide">
-                            <a href="#" class="card-link">
-                                <img class="card-item__swipper card-image" src="assets/images/news/news_1.jpeg" alt="Card Image"
-                                    class="card-image">
-                                <p class="news-title">الدكتور عمر المقرمي رئيس المركز الرئيسي يعلن عن اتفاقية جديدة مع
-                                    جامعة إينونو الحكومية التركية</p>
-                                <button class="card-button material-symbols-rounded"><i
-                                        class="fa-solid fa-arrow-right"></i></button>
-                            </a>
-                        </article>
-                        <article class="card-item card__article swiper-slide">
-                            <a href="#" class="card-link">
-                                <img class="card-item__swipper card-image" src="assets/images/news/news_1.jpeg" alt="Card Image"
-                                    class="card-image">
-                                <p class="news-title">الدكتور عمر المقرمي رئيس المركز الرئيسي يعلن عن اتفاقية جديدة مع
-                                    جامعة إينونو الحكومية التركية</p>
-                                <button class="card-button material-symbols-rounded"><i
-                                        class="fa-solid fa-arrow-right"></i></button>
-                            </a>
-                        </article>
-                        <article class="card-item card__article swiper-slide">
-                            <a href="#" class="card-link">
-                                <img class="card-item__swipper card-image" src="assets/images/news/news_1.jpeg" alt="Card Image"
-                                    class="card-image">
-                                <p class="news-title">الدكتور عمر المقرمي رئيس المركز الرئيسي يعلن عن اتفاقية جديدة مع
-                                    جامعة إينونو الحكومية التركية</p>
-                                <button class="card-button material-symbols-rounded"><i
-                                        class="fa-solid fa-arrow-right"></i></button>
-                            </a>
-                        </article>
-                        <article class="card-item card__article swiper-slide">
-                            <a href="#" class="card-link">
-                                <img class="card-item__swipper card-image" src="assets/images/news/news_1.jpeg" alt="Card Image"
-                                    class="card-image">
-                                <p class="news-title">الدكتور عمر المقرمي رئيس المركز الرئيسي يعلن عن اتفاقية جديدة مع
-                                    جامعة إينونو الحكومية التركية</p>
-                                <button class="card-button material-symbols-rounded"><i
-                                        class="fa-solid fa-arrow-right"></i></button>
-                            </a>
-                        </article>
-                        <article class="card-item card__article swiper-slide">
-                            <a href="#" class="card-link">
-                                <img class="card-item__swipper card-image" src="assets/images/news/news_1.jpeg" alt="Card Image"
-                                    class="card-image">
-                                <p class="news-title">الدكتور عمر المقرمي رئيس المركز الرئيسي يعلن عن اتفاقية جديدة مع
-                                    جامعة إينونو الحكومية التركية</p>
-                                <button class="card-button material-symbols-rounded"><i
-                                        class="fa-solid fa-arrow-right"></i></button>
-                            </a>
-                        </article>
+                        @endforeach
                     </div>
                 </div>
                 <!-- Navigation buttons -->
@@ -156,6 +107,42 @@
             </div>
         </div>
     </section>
+
+    <!--========================================== Swipper ==========================================-->
+    <section class="news" style="background-color: white">
+        <div class="container">
+            <div class="card__container row swiper">
+                <h1> الأحداث القادمة</h1>
+                <a href="{{route('news')}}" class="btn btn-m">اظهارالكل</a>
+                <div class="card__content">
+                    <div class="card-list swiper-wrapper">
+                        @foreach($events as $event)
+                            <article class="card-item card__article swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img class="card-item__swipper card-image" src="{{$event->photo}}" alt="Card Image"
+                                         class="card-image">
+                                    <p class="news-title">{{$event->title}}</p>
+                                    <button class="card-button material-symbols-rounded"><i
+                                            class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </a>
+                            </article>
+                        @endforeach
+                    </div>
+                </div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next">
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="ri-arrow-left-s-line"></i>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
 
     <!--========================================== Colleges ================================-->
     <section class="colleges news">
@@ -230,49 +217,23 @@
     <!--========================================== Question And Answer ================================-->
     <h1 class="faq-title">الأسئلة الشائعة</h1>
     <section class="container faq-section">
+        @foreach($freq as $question)
         <div class="faq-item">
             <button class="faq-button" onclick="toggleAnswer('main1')">
-                <p>التعريف بالجامعة- أسئلة عامة</p>
+                <p>{{$question->question}}</p>
                 <span class="plus-sign">+</span>
             </button>
             <div id="main1" class="faq-answer">
                 <p>
-                    جــ: تأسست الجامعة عام 2006 م في مدينة مينيابوليس، بولاية مينيسوتا الأمريكية، على يد المجلس الفقهي
-                    في الولاية (IJCM). وفق أسس علمية بحتة، وحصلت على اعتراف مكتب التعليم العالي في ولاية منيسوتا في
-                    العام 2013م.
-                    تهدف إلى تعزيز البحث العلمي، والتميز التعليمي، في التخصصات الشرعية وغير الشرعية. لا تنتمي إلى أي حزب
-                    أو جماعة أو تيار فكري أو سياسي. -
+                    {{$question->answer}}
                 </p>
             </div>
         </div>
-        <div class="faq-item">
-            <button class="faq-button" onclick="toggleAnswer('main1')">
-                <p>التعريف بالجامعة- أسئلة عامة</p>
-                <span class="plus-sign">+</span>
-            </button>
-            <div id="main1" class="faq-answer">
-                <p>
-                    يقع مقر الجامعة الإسلامية بمينيسوتا في مدينة مينيابوليس بولاية مينيسوتا، الولايات المتحدة
-                    الأمريكية. العنوان الرئيسي للجامعة حسب خرائط Google هو:
-                    Park ave S, Bloomington, MN 55420 USA 8201
-                    تبلغ مساحة المبنى 60000 قدم مربع (حوالي 10 فدان) وتحتوي على مواقف سيارات تسع لـ 350 سيارة.
-                </p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-button" onclick="toggleAnswer('main1')">
-                <p>التعريف بالجامعة- أسئلة عامة</p>
-                <span class="plus-sign">+</span>
-            </button>
-            <div id="main1" class="faq-answer">
-                <p>
-                    يقع مقر الجامعة الإسلامية بمينيسوتا في مدينة مينيابوليس بولاية مينيسوتا، الولايات المتحدة
-                    الأمريكية. العنوان الرئيسي للجامعة حسب خرائط Google هو:
-                    Park ave S, Bloomington, MN 55420 USA 8201
-                    تبلغ مساحة المبنى 60000 قدم مربع (حوالي 10 فدان) وتحتوي على مواقف سيارات تسع لـ 350 سيارة.
-                </p>
-            </div>
-        </div>
+        @endforeach
+            <center>
+                <a href="{{route('freqQuestions')}}" class="btn btn-m">اظهارالكل</a>
+            </center>
     </section>
 
-    @endsection
+
+@endsection
