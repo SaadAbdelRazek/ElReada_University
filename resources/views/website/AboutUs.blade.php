@@ -1,7 +1,7 @@
 @extends('website.master.app')
 @section('content')
 @section('path')
-    الرئيسية / عن الجامعة
+    الرئيسية | عن الجامعة
 @endsection
 <!--========================================== About Us =============================================-->
 <section class="container about-us-section">

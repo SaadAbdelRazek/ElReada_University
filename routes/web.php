@@ -6,6 +6,10 @@ use App\Http\Controllers\FreqQuestionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CollegesController;
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\AgentController;
+use App\Http\Controllers\UniversityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,6 +46,22 @@ Route::get('/news',[NewsController::class,'index'])->name('news');
 Route::get('/about-us',[AboutController::class, 'index'])->name('about');
 Route::get('/about-us-logo',[AboutController::class, 'slogan'])->name('slogan');
 Route::get('/about-us-President',[AboutController::class, 'President'])->name('Presidents');
+Route::get('/president-speech',[AboutController::class, 'President_speech'])->name('President_speech');
+Route::get('/about-us-study',[AboutController::class, 'study'])->name('study');
+
+
+Route::get('/colleges',[CollegesController::class, 'index'])->name('colleges');
+Route::get('/college-details/{id}',[CollegesController::class, 'college_info'])->name('college_info');
+Route::get('/college-details-college_dean/{id}',[CollegesController::class, 'college_dean'])->name('college_dean');
+
+Route::get('/department-details/{id}',[DepartmentController::class, 'index'])->name('department_info');
+Route::get('/agent/{id}',[AgentController::class, 'agent'])->name('agent');
+Route::get('/deanship-info/{id}',[UniversityController::class, 'deanship'])->name('deanship');
+
+Route::get('/contact-us',[UniversityController::class, 'contacts'])->name('contacts');
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

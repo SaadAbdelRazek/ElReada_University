@@ -45,13 +45,14 @@
   margin-top: 30px;
   /* background: linear-gradient(#ededed, #e1e1e1); */
   background: var(--seventhcolor);
+  padding: 20px;
 }
 
 .news h1 {
   text-align: center;
   padding-top: 10px;
   color: var(--thirdcolor);
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .row {
