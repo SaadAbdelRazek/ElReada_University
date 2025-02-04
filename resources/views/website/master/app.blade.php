@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الصفحة الرئيسية</title>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +29,11 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{asset('css/swiper-bundle.min.css')}}">
     <!--=============== Swiper CSS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="css/swipper.css">
+    <link rel="stylesheet" href="{{asset('css/swipper.css')}}">
 </head>
 
 <body>
@@ -54,7 +54,7 @@
                 </button>
             </div>
             <div class="header-top-center">
-                <img class="logo" src="assets/images/logo/Logo_Uni.png" alt="logo" />
+                <img class="logo" src="{{asset('assets/images/logo/Logo_Uni.png')}}" alt="logo" />
             </div>
             <div class="header-top-left">
                 <form action="">
@@ -83,7 +83,7 @@
                 <li><a href="Colleage.html">الدراسة فى الجامعة</a></li>
                 <li><a href="Event.html">الأحداث</a></li>
                 <li><a href="News.html">الأخبار</a></li>
-                <li><a href="#">تواصل معنا</a></li>
+                <li><a href="{{route('contacts')}}">تواصل معنا</a></li>
             </ul>
         </div>
         <div class="header-bottom">
@@ -93,44 +93,55 @@
                     <li class="nav-item">
                         <a href="{{route('about')}}">عن الجامعة</a>
                         <ul class="dropdown">
-                            <li><a href="#">مجلس الجامعة</a></li>
-                            <li><a href="#">رئيس الجامعة</a></li>
-                            <li><a href="#">وكيل الجامعة</a></li>
-                            <li><a href="#">وكالة الجامعة</a></li>
-                            <li><a href="#">المجلس العلمى</a></li>
-                            <li><a href="#">اللجنة الدائمة للترقيات</a></li>
-                            <li><a href="#">الإدارة العامة للشؤون المالية والإدارية</a></li>
-                            <li><a href="#">الشؤؤون الإدارية</a></li>
+                            <li><a href="{{route('Presidents')}}">مجلس الجامعة</a></li>
+                            <li><a href="{{route('President_speech')}}">رئيس الجامعة</a></li>
+                            <li><a href="{{route('agent',$pub_university->agent_id)}}">وكيل الجامعة</a></li>
+                            <li><a href="{{ route('slogan') }}">شعار الجامعة</a></li>
+                            {{-- <li><a href="#">المجلس العلمى</a></li> --}}
+                            <li><a href="{{route('study')}}">نظام الدراسة </a></li>
+
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="Colleage.html">الدراسة فى الجامعة</a>
+                        <a href="{{route('study')}}">الدراسة فى الجامعة</a>
+
                         <ul class="dropdown">
+                            <li><a href="study">نظام الدراسة </a></li>
                             <li class="nav-item">
-                                <a href="Colleage.html">الكليات</a>
+                                <a href="{{route('colleges')}}">الكليات</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">كلية الدراسة الإسلامية</a></li>
-                                    <li><a href="#">كلية الطب</a></li>
-                                    <li><a href="#">كلية العلوم</a></li>
+                                    @foreach ($pub_colleges as $college)
+
+                                    <li><a href="#">{{$college->name}}</a></li>
+                                    @endforeach
+
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a href="#">العمادات</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">عمادة تقنية المعلمومات</a></li>
+                                    @foreach ($pub_deanships as $deanship)
+                                    <li><a href="{{route('deanship',$deanship->id)}}">{{$deanship->name}}</a></li>
+
+                                    @endforeach
+                                    {{-- <li><a href="#">عمادة تقنية المعلمومات</a></li>
                                     <li><a href="#">عمادة الدراسات العليا</a></li>
-                                    <li><a href="#">عمادة القبول والتسجيل</a></li>
+                                    <li><a href="#">عمادة القبول والتسجيل</a></li> --}}
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a href="#">الوحدات الإدارية المساعدة</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">وحدة البحث العلمى</a></li>
-                                    <li><a href="#">وحدة التصوير</a></li>
-                                    <li><a href="#">وحدة المتابعة</a></li>
+                                    @foreach ($pub_units as $unit)
+                                    <li><a href="#">{{$unit->name}}</a></li>
+
+                                    @endforeach
+                                    {{-- <li><a href="#">وحدة البحث العلمى</a></li> --}}
+                                    {{-- <li><a href="#">وحدة التصوير</a></li> --}}
+                                    {{-- <li><a href="#">وحدة المتابعة</a></li> --}}
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a href="#">أعضاء هيئة التدريس</a>
                                 <ul class="dropdown">
                                     <li><a href="#">كلية الهندسة</a></li>
@@ -145,10 +156,10 @@
                                     <li><a href="#">كلية الطب</a></li>
                                     <li><a href="#">كلية العلوم</a></li>
                                 </ul>
-                            </li>
+                            </li> --}}
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a href="#">المراكز</a>
                         <ul class="dropdown">
                             <li><a href="#">مركز التدريب والتطوير</a></li>
@@ -159,12 +170,12 @@
                             <li><a href="#">مكتبة الكلية</a></li>
                             <li><a href="#">المكتبة الرقمية</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item"><a href="#">الفروع</a></li>
+                    </li> --}}
+                    {{-- <li class="nav-item"><a href="#">الفروع</a></li> --}}
                     <li class="nav-item"><a href="#">اللوائح والأنظمة</a></li>
                     <li class="nav-item"><a href="Event.html">الأحداث</a></li>
                     <li class="nav-item"><a href="News.html">الأخبار</a></li>
-                    <li class="nav-item"><a href="#">تواصل معنا</a></li>
+                    <li class="nav-item"><a href="{{route('contacts')}}">تواصل معنا</a></li>
                 </ul>
             </nav>
         </div>
@@ -217,17 +228,16 @@
         <div class="top-left">
             <h2>تابعنا على </h2>
             <ul>
-                <li><a href="#"><img src="assets/images/scocialmedia/facebook.png" alt="facebook" /></a></li>
-                <li><a href="#"><img src="assets/images/scocialmedia/linkedin.png" alt="linkedin" /></a></li>
-                <li><a href="#"><img src="assets/images/scocialmedia/twitter.png" alt="twitter" /></a></li>
-                <li><a href="#"><img src="assets/images/scocialmedia/whatsapp.png" alt="whatsapp" /></a></li>
-                <li><a href="#"><img src="assets/images/scocialmedia/youtube.png" alt="youtube" /></a></li>
+                <li @if (!$pub_contact->facebook) style = 'display:none' @endif ><a href="{{$pub_contact->facebook}}"><img src="{{asset('assets/images/scocialmedia/facebook.png')}}" alt="facebook" /></a></li>
+                <li @if (!$pub_contact->linkedin) style = 'display:none' @endif ><a href="{{$pub_contact->linkedin}}"><img src="{{asset('assets/images/scocialmedia/linkedin.png')}}" alt="linkedin" /></a></li>
+                <li @if (!$pub_contact->whatsapp) style = 'display:none' @endif ><a href="https://api.whatsapp.com/send?phone={{$pub_contact->whatsapp}}"><img src="{{asset('assets/images/scocialmedia/whatsapp.png')}}" alt="whatsapp" /></a></li>
+                <li @if (!$pub_contact->youtube) style = 'display:none' @endif ><a href="{{$pub_contact->youtube}}"><img src="{{asset('assets/images/scocialmedia/youtube.png')}}" alt="youtube" /></a></li>
             </ul>
         </div>
     </div>
     <hr class="ruler">
     <div class="bottom-footer">
-        <img src="assets/images/logo/Logo_Uni.png" alt="logo" />
+        <img src="{{asset('assets/images/logo/Logo_Uni.png')}}" alt="logo" />
         <ul class="item-title">
             <li><a href="#">سياسة الخصوصية</a></li>
             <li><a href="#">ملفات الارتباط</a></li>
@@ -236,13 +246,13 @@
         <p>جميع الحقوق محفوظة الجامعة الإسلامية © 2024 | برمجة المعلمين</p>
     </div>
 </footer>
-<script src="js/script.js"></script>
-<script src="js/Bmenu.js"></script>
-<script src="js/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/HomeSlider.js" type="text/javascript"></script>
-<script src="js/questionandanswer.js"></script>
-<script src="js/parallax.js"></script>
+<script src="{{asset('js/script.js')}}"></script>
+<script src="{{asset('js/Bmenu.js')}}"></script>
+<script src="{{asset('js/swiper-bundle.min.js')}}"></script>
+<script src="{{asset('js/main.js')}}"></script>
+<script src="{{asset('js/HomeSlider.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/questionandanswer.js')}}"></script>
+<script src="{{asset('js/parallax.js')}}"></script>
 </body>
 
 </html>

@@ -34,7 +34,7 @@ button {
     align-items: center;
     height: 100px;
     background-color: var(--fourthcolor);
-    padding: 10px;
+    padding: 20px;
 }
 
 .header-top-left {
@@ -144,6 +144,7 @@ nav .nav-items {
     flex: 1;
     padding: 0 0 0 40px;
     justify-content: center;
+    background-color: #0e6862;
 
 }
 
@@ -756,6 +757,7 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 200px;
+    padding: 20px;
 
 }
 
@@ -841,6 +843,8 @@ footer .bottom-footer ul {
     display: flex;
     gap: 50px;
     margin-top: 33px;
+    justify-content: right;
+    margin-bottom: 20px;
 }
 
 .aside-content .aside-ul {
@@ -851,7 +855,7 @@ footer .bottom-footer ul {
 
 .about-us-section .content h2 {
     color: var(--thirdcolor);
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .about-us-section .content .box h3 {
@@ -894,14 +898,16 @@ footer .bottom-footer ul {
 .instructor {
     display: flex;
     gap: 10px;
-    width: 850px;
+    margin-bottom: 40px;
+    padding: 15px;
+    width: 1050px;
     border-radius: 16px;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     border: 1px solid var(--seventhcolor);
 }
 
 .instructor img {
-    width: 322px;
+    width: 380px;
     border-radius: 9px;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
@@ -1074,6 +1080,43 @@ footer .bottom-footer ul {
 
 .college-crd-cnt:hover .my-col-desc {
     color: var(--thirdcolor)
+}
+
+
+.contact{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+.contact-cards{
+    text-align: center;
+    border:1px solid rgb(202, 201, 201);
+    border-radius: 20%;
+    width: 200px;
+    padding: 30px;
+    background-color: #fcfcfc;
+}
+
+.contact-cards i{
+    font-size: 30px;
+    color: rgb(98, 98, 98);
+}
+
+
+.contact-cards a{
+    border: 1px solid #e3e3e3;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: black;
+    transition-duration: 1s;
+}
+
+.contact-cards a:hover{
+    background-color: #088179;
+    color: white;
 }
 
 /****************************************** MediaQuery (Respinsive) ******************************************/
