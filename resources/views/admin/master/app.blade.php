@@ -51,6 +51,22 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                         الأسئلة الشائعة
                     </a>
+                    <a class="nav-link" href="{{route('news.index')}}">
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                        الأخبار
+                    </a>
+                    <a class="nav-link" href="{{route('next_events.index')}}">
+                        <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                        الأحداث القادمة
+                    </a>
+                    <a class="nav-link" href="{{route('prev_events.index')}}">
+                        <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                        الأحداث السابقة
+                    </a>
+                    <a class="nav-link" href="{{route('admin-freqs')}}">
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+اللوائح والأنظمة
+                    </a>
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

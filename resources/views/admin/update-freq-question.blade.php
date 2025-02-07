@@ -2,7 +2,7 @@
 @section('content')
     <div id="layoutSidenav_content">
         <main>
-            <div class="container-fluid px-4" style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; text-align: center;">
+            <div class="container-fluid px-4" style="display: flex; justify-content: center; align-items: center; min-height: 100vh; flex-direction: column; text-align: center;">
                 <ol class="breadcrumb mb-4" style="list-style: none; padding: 0; margin: 0;">
                     <li class="breadcrumb-item active">
                         <h2>تحديث السؤال أو الإجابة</h2>

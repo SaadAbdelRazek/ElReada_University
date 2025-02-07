@@ -45,7 +45,7 @@
                         @foreach($news as $single)
                         <article class="card-item card__article swiper-slide">
                             <a href="#" class="card-link">
-                                <img class="card-item__swipper card-image" src="{{$single->photo}}" alt="Card Image"
+                                <img class="card-item__swipper card-image" src="{{asset('storage/'.$single->photo)}}" alt="Card Image"
                                     class="card-image">
                                 <p class="news-title">{{$single->title}}</p>
                                 <button class="card-button material-symbols-rounded"><i
@@ -119,7 +119,7 @@
                         @foreach($events as $event)
                             <article class="card-item card__article swiper-slide">
                                 <a href="#" class="card-link">
-                                    <img class="card-item__swipper card-image" src="{{$event->photo}}" alt="Card Image"
+                                    <img class="card-item__swipper card-image" src="{{asset('storage/'.$event->photo)}}" alt="Card Image"
                                          class="card-image">
                                     <p class="news-title">{{$event->title}}</p>
                                     <button class="card-button material-symbols-rounded"><i

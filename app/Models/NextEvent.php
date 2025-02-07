@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class NextEvent extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description', 'photo', 'video', 'end_date'];
+    protected $fillable = ['title', 'description', 'photo', 'video', 'end_date','form_link'];
 }

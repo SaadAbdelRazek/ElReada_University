@@ -30,4 +30,9 @@ class HomeController extends Controller
         return view('website.next-events', compact('events'));
     }
 
+    public function viewNews(){
+        $news = News::all();
+        return view('website.News', compact('news'));
+    }
+
 }

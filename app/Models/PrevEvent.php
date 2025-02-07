@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class PrevEvent extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'body', 'photo'];
+    protected $fillable = ['title', 'body', 'photo','video','date'];
 }

@@ -5,6 +5,9 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\FreqQuestionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\NextEventController;
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\PrevEventController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CollegesController;
 use App\Http\Controllers\DepartmentController;
@@ -34,6 +37,20 @@ Route::delete('/dashboard/freq-questions/{id}', [FreqQuestionController::class, 
 
 Route::get('/dashboard/home',[AdminController::class,'index'])->name('admin-dashboard');
 
+//Dashboard News
+Route::resource('/dashboard/news', NewsController::class);
+
+//Dashboard Prev Events
+Route::resource('/dashboard/prev_events', PrevEventController::class);
+
+//Dashboard Next Events
+Route::resource('/dashboard/next_events', NextEventController::class);
+
+Route::get('/dashboard/news/{id}/upload-photos',[PhotoController::class,'viewUploadPhotos'])->name('view-upload-photos');
+Route::post('/news/{id}/upload-photos', [PhotoController::class, 'uploadNewsPhotos'])->name('photos.upload');
+
+
+
 Route::get('/freq-questions',[HomeController::class,'viewFreqs'])->name('freqQuestions');
 Route::get('/upcoming-events',[HomeController::class,'viewEvents'])->name('next-events');
 Route::get('/event-details/{id}',[EventController::class,'viewEventDetails'])->name('event-details');
@@ -41,7 +58,7 @@ Route::get('/event-details/{id}',[EventController::class,'viewEventDetails'])->n
 Route::get('/event-form/{id}',[EventController::class,'viewEventForm'])->name('event-form');
 Route::post('/register-event', [EventController::class, 'registerForEvent'])->name('event.register');
 
-Route::get('/news',[NewsController::class,'index'])->name('news');
+Route::get('/news',[HomeController::class,'viewNews'])->name('news');
 
 Route::get('/about-us',[AboutController::class, 'index'])->name('about');
 Route::get('/about-us-logo',[AboutController::class, 'slogan'])->name('slogan');
